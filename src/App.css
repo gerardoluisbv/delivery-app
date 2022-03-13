@@ -7,32 +7,159 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  margin: 0 auto;
+  transform: scale(.6);
 }
 
-.App-header {
-  background-color: #282c34;
+.principal {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* se esta sobre-escribiendo el estilo dandome un error */
+/*
+header {
+  background-color: #FFBA00;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  bottom: 0px;
+  margin: 0px;
+}
+*/
+
+nav {
+  padding-top: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.centro {
+  background-color: #FF671D;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #230B0C;
+}
+
+.final {
+  background-color: #FFBA00;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #230B0C;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* contenedor del menu hamburguesa */
+.container__menuBars {
+  display: flex;
+  margin: 0 5px;
+  padding: 14px;
+  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  user-select: none;
+  flex: 0 0 auto;
+  cursor: default;  /* NO HACE NADA AL HACER CLICK, SE ELIMINA ESA SOMBRA */
 }
+
+/*   */
+.nav__menu > i {
+
+  outline: none;
+}
+
+
+/* estilos del header de getonboard */
+/* el header tiene estas 2 clases unicamente */
+.gb-header--main {
+  z-index: 901;
+}
+
+.gb-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateZ(0);
+  z-index: 900;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(135,153,160,0.25);
+}
+
+
+/* Este es el flex que tiene todos los iconos del Header */
+
+.gb-header__container {
+    display: flex;
+    height: 66px;
+    padding: 0 29px;
+    justify-content: space-between;
+}
+
+
+/* flex y alinea los elementos al centro */
+.gb-header__brand, .gb-header__content, .gb-header__actions, .gb-header__nav-trigger {
+  display: flex;
+  align-items: center;
+}
+
+/* menu hamburguesa independiente */
+.gb-header__nav-trigger {
+  border: 0;
+  background: transparent;
+  padding-left: 0;
+}
+
+
+/* estilos para el link a el loguito pequeño al lado del menu hamburguesa */
+a {
+  color: #0093d3;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  transition: .15s;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+}
+
+
+
+/* un dib que esta como espacio en blanco entre el logo y las acciones de la derecha msjs, 
+notificaciones, foto de perfil */
+.gb-header__quota, .gb-header__content {
+  flex-grow: 2;
+}
+
+  /* contiene los 4 elementos de la derecha msj, foto de perfil, notificacion y busqueda */
+.gb-header__brand, .gb-header__content, .gb-header__actions, .gb-header__nav-trigger {
+  display: flex;
+  align-items: center;
+}
+
+

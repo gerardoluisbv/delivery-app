@@ -1,0 +1,184 @@
+
+
+.navbar-header--main {
+  z-index: 901;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateZ(0);
+  z-index: 900;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(135, 153, 160, 0.25);
+}
+
+.navbar-header__container {
+  display: flex;
+  height: 48px;
+  padding: 0 29px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* el menu entero que se despliega cuando haces click en el menu hamburguesa */
+
+.nav-menu {
+  box-shadow: 6px 0 15px rgb(0 0 0 / 20%);
+  left: -240px;
+  transform: translatex(0);
+  width: 220px;
+  transition: 0.25s ease-out;
+  padding-top: 89px;
+  width: 194px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 820;
+  overflow-y: auto;
+  background-color: #f2f6f7;
+  transition: 0.25s ease-out;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+/* cada icono del menu que se despliega */
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 30px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #1a83ff;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #060b26;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+/* parte de atras cuando se despliega en menu wue se torna opaca*/
+.left-col-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+  background-color: rgba(43, 53, 59, 0.4);
+  visibility: hidden;
+}
+
+.left-col-backdrop.active {
+  visibility: visible;
+  
+}
+
+
+/* estilo de GNB */
+.gb-header__brand {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: center;
+  
+}
+
+.iconLogoMenu{
+  position: relative;
+  min-width: 22px;
+  max-width: 22px;
+  padding-bottom: 2px;
+  margin-left: 3px;
+}
+
+.icons{
+  position: relative;
+  min-width: 20px;
+  max-height: 20px;
+}
+
+.nav-right .icons-cart {
+  position: relative;
+  min-width: 25px;
+  max-height: 25px;
+  margin-left: 3px; 
+}
+
+.nav-right {
+  position: relative;
+  font-size: 21px;
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  position: relative;
+  font-size: 21px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+
+/* CAMBIA PROPIEDADES DEL DIV DONDE ESTA  EL ICONO DE HAMBURGUESA */
+
+
+@media screen and (max-width: 550px) {
+  /* LE QUITA PADDING AL MENU HAMBURGUESA EN TAMAÑO CELLPHONE */
+  .navbar-header__container {
+    padding: 0 18px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-menu {
+    /* el meni que se despliega se agranda un poco mas */
+    box-shadow: 6px 0 15px rgb(0 0 0 / 20%);
+    left: -240px;
+    transform: translatex(0);
+    width: 250px;
+    transition: 0.25s ease-out;
+  }
+}
