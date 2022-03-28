@@ -1,14 +1,14 @@
-
-
 .navbar-header--main {
   z-index: 901;
 }
 
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
   transform: translateZ(0);
   z-index: 900;
   background-color: #fff;
@@ -16,13 +16,16 @@
 }
 
 .navbar-header__container {
+  
   display: flex;
-  height: 48px;
+  height: 65px;
   padding: 0 29px;
   justify-content: space-between;
   align-items: center;
-}
+  box-shadow: 0px 16px 24px -18px rgba(119, 118, 118, 0.5);
 
+  /*0 16px 24px -18px ;*/
+}
 
 /* el menu entero que se despliega cuando haces click en el menu hamburguesa */
 
@@ -105,9 +108,7 @@ span {
 
 .left-col-backdrop.active {
   visibility: visible;
-  
 }
-
 
 /* estilo de GNB */
 .gb-header__brand {
@@ -117,10 +118,9 @@ span {
   flex-direction: row;
   justify-items: center;
   justify-content: center;
-  
 }
 
-.iconLogoMenu{
+.iconLogoMenu {
   position: relative;
   min-width: 22px;
   max-width: 22px;
@@ -128,7 +128,7 @@ span {
   margin-left: 3px;
 }
 
-.icons{
+.icons {
   position: relative;
   min-width: 20px;
   max-height: 20px;
@@ -138,7 +138,14 @@ span {
   position: relative;
   min-width: 25px;
   max-height: 25px;
-  margin-left: 3px; 
+  margin-left: 3px;
+}
+
+.nav-cart .icons-cart {
+  position: relative;
+  min-width: 28px;
+  max-height: 28px;
+  margin-left: 3px;
 }
 
 .nav-right {
@@ -150,6 +157,30 @@ span {
   align-items: center;
 }
 
+.nav-cart {
+  position: relative;
+  font-size: 21px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* clase que se le aplica al numero que estan dentro del carrito de compras */
+/* span con un sosition absolute que esta dentro de un div con position relative */
+
+.nav-cart-count {
+  position: absolute;
+  top: -6px;
+  left: 49.5%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 14px;
+  color: orangered;
+  font-weight: bold;
+}
+
 .nav-left {
   position: relative;
   font-size: 21px;
@@ -157,13 +188,34 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+}
+
+
+nav {
+  padding-top: 50px;
+  display: flex;
+  align-items: flex-start;
 }
 
 
 
-/* CAMBIA PROPIEDADES DEL DIV DONDE ESTA  EL ICONO DE HAMBURGUESA */
 
+
+a {
+  color: #0093d3;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  transition: .15s;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+}
+
+
+/* CAMBIA PROPIEDADES DEL DIV DONDE ESTA  EL ICONO DE HAMBURGUESA */
 
 @media screen and (max-width: 550px) {
   /* LE QUITA PADDING AL MENU HAMBURGUESA EN TAMAÑO CELLPHONE */
@@ -174,7 +226,7 @@ span {
 
 @media screen and (max-width: 991px) {
   .nav-menu {
-    /* el meni que se despliega se agranda un poco mas */
+    /* el menu que se despliega se agranda un poco mas */
     box-shadow: 6px 0 15px rgb(0 0 0 / 20%);
     left: -240px;
     transform: translatex(0);
