@@ -10,7 +10,7 @@ export const Home = () => {
       <div className="container_form_home homeImage">
         
 
-          <h1 className="font-h1-desktop"> ¡Tu Pides, Nosotros te las llevamos! </h1>
+          <h1 className="font-h1-desktop"> ¡Tu Pides, Nosotros te las llevamos!!! </h1>
       
 
         <div className="sub_title_home">
