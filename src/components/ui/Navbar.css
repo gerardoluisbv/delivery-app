@@ -1,6 +1,4 @@
-.navbar-header--main {
-  z-index: 901;
-}
+
 
 .navbar {
   position: sticky;
@@ -24,13 +22,13 @@
   align-items: center;
   box-shadow: 0px 16px 24px -18px rgba(119, 118, 118, 0.5);
 
-  /*0 16px 24px -18px ;*/
 }
 
 /* el menu entero que se despliega cuando haces click en el menu hamburguesa */
 
 .nav-menu {
   box-shadow: 6px 0 15px rgb(0 0 0 / 20%);
+
   left: -240px;
   transform: translatex(0);
   width: 220px;
@@ -61,34 +59,29 @@
   height: 60px;
 }
 
-.nav-text a {
+
+
+a {
+  color: #0093d3;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  transition: .15s;
   text-decoration: none;
-  color: #f5f5f5;
-  font-size: 18px;
-  width: 95%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  border-radius: 4px;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
 }
 
-.nav-text a:hover {
-  background-color: #1a83ff;
+.nav-text:hover {
+  background-color: orange;
 }
 
 .nav-menu-items {
   width: 100%;
 }
 
-.navbar-toggle {
-  background-color: #060b26;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
 
 span {
   margin-left: 16px;
@@ -120,34 +113,26 @@ span {
   justify-content: center;
 }
 
-.iconLogoMenu {
-  position: relative;
-  min-width: 22px;
-  max-width: 22px;
-  padding-bottom: 2px;
-  margin-left: 3px;
-}
 
-.icons {
-  position: relative;
-  min-width: 20px;
-  max-height: 20px;
-}
 
 .nav-right .icons-cart {
-  position: relative;
-  min-width: 25px;
-  max-height: 25px;
-  margin-left: 3px;
-}
-
-.nav-cart .icons-cart {
   position: relative;
   min-width: 28px;
   max-height: 28px;
   margin-left: 3px;
+  
 }
 
+.nav-cart {
+  position: relative;
+  font-size: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* div del lado derecho del header, contiene el icon user y cart */
 .nav-right {
   position: relative;
   font-size: 21px;
@@ -155,16 +140,10 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
-.nav-cart {
-  position: relative;
-  font-size: 21px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* clase que se le aplica al numero que estan dentro del carrito de compras */
 /* span con un sosition absolute que esta dentro de un div con position relative */
@@ -197,23 +176,21 @@ nav {
   align-items: flex-start;
 }
 
+/*  ICONS   */
 
-
-
-
-a {
-  color: #0093d3;
-  -webkit-transition: .15s;
-  -moz-transition: .15s;
-  -o-transition: .15s;
-  transition: .15s;
-  text-decoration: none;
-  text-decoration-line: none;
-  text-decoration-thickness: initial;
-  text-decoration-style: initial;
-  text-decoration-color: initial;
+.iconLogoMenu {
+  position: relative;
+  min-width: 22px;
+  max-width: 22px;
+  padding-bottom: 2px;
+  margin-left: 3px;
 }
 
+.icons {
+  position: relative;
+  min-width: 20px;
+  max-height: 20px;
+}
 
 /* CAMBIA PROPIEDADES DEL DIV DONDE ESTA  EL ICONO DE HAMBURGUESA */
 
